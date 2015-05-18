@@ -1,9 +1,9 @@
 {
-    "name": "nmcteam/image-with-text",
+    "name": "filpgame/image-with-text",
     "type": "library",
     "description": "Create images with embedded text and advanced typography",
     "keywords": ["text","typeset","typography","write","image","gd"],
-    "homepage": "http://github.com/nmcteam/image-with-text",
+    "homepage": "http://github.com/filpgame/image-with-text",
     "license": "MIT",
     "authors": [
         {
