@@ -235,8 +235,11 @@ class Text
             for ($i = 0; $i < count($this->lines); $i++) {
                 $line =& $this->lines[$i];
                 if ($line['full'] === false) {
-                    $charsPotential = strlen($word) + $line['chars'];
-
+                    $charsPotential = mb_strlen($word,'utf-8') + $line['chars'];
+                    if($word=="\n"){
+                         $line['full'] = true;
+                         break;
+                     }
                     if ($charsPotential <= $this->width) {
                         array_push($line['words'], $word);
                         $line['chars'] = $charsPotential;
