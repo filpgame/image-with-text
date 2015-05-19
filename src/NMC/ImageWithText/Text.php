@@ -213,7 +213,11 @@ class Text
                 }
 
                 // Render text onto image
-                $image->getImage()->text($line['text'], $offsetX, $offsetY, $this->size, $this->color, 0, $this->font);
+                $image->getImage()->text($line['text'], $offsetX, $offsetY, function($font) {
+                    $font->file($this->font);
+                    $font->size($this->size);
+                    $font->color($this->color);
+                });
             }
         }
     }
