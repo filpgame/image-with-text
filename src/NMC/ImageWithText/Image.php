@@ -114,7 +114,7 @@ class Image
      */
     public function getWidth()
     {
-        return imagesx($this->image->resource);
+        return $this->image->width();
     }
 
     /**
