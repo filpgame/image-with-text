@@ -74,7 +74,7 @@ class Image
      */
     public function __construct($sourceImage)
     {
-        $this->image = \Intervention\Image\Image::make($sourceImage);
+        $this->image = \Intervention\Image\ImageManagerStatic::make($sourceImage);
     }
 
     /**
